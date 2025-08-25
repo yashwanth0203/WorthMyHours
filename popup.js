@@ -30,7 +30,7 @@ worthMyHourToggle.addEventListener("change", toggleCustomMessageVisibility);
 chrome.storage.sync.get(
     [
       "hourlyWage",
-      "WorthMyHour",
+      "worthMyHour",
       "customMessage",
       "textColor",
       "bgColor",
@@ -52,7 +52,7 @@ chrome.storage.sync.get(
 );
 
 saveButton.addEventListener("click",() => {
-    const salaryValue = parseFloat(salaryInput.value());
+    const salaryValue = parseFloat(salaryInput.value);
     if(salaryValue && salaryValue > 0){
         chrome.storage.sync.set(
         {
