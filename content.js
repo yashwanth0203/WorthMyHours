@@ -215,9 +215,9 @@ function calculateAndAppendHours_Amazon(priceContainer) {
 
   if (match && match[1]) {
     const priceValue = parseFloat(match[1]);
-    if(!isNan && priceValue > 0){
+    if(!isNaN(priceValue) && priceValue > 0){
         const formattedTime = formatTimeCost(priceValue, hourlyWage);
-        const timeText = formattedTime ? `${formattedTime}${worthMyHour ? `${customMessage}` : ""}` : "";
+        const timeText = formattedTime ? `${formattedTime }${worthMyHour ? `${customMessage}` : ""}` : "";
         if(timeText){
             const hoursSpan = document.createElement("span");
             hoursSpan.textContent = timeText;
